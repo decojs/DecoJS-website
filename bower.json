@@ -1,0 +1,20 @@
+{
+  "name": "OrdnungjsCom",
+  "version": "0.0.0",
+  "authors": [
+    "Marius Gundersen <me@mariusgundersen.net>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.1",
+    "ordnung": "~0.2.10"
+  }
+}
