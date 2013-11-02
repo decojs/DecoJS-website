@@ -1,0 +1,14 @@
+.navbar.navbar-default{
+	margin-bottom: 0;
+}
+
+.sidebar{
+	width: 190px;
+	float: left;
+	position: relative;
+}
+.main-content{
+	margin: 0 0 0 190px;
+	padding-top: 20px;
+	position: relative;s
+}
