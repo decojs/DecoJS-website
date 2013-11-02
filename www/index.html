@@ -25,50 +25,37 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">OrdnungJS</a>
+        <a class="navbar-brand" href="#/">OrdnungJS</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Get Started</a></li>
-          <li><a href="#">Tutorials</a></li>
+          <li class="active"><a href="#/start">Get Started</a></li>
+          <li><a href="#/tutorial/">Tutorials</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">ViewModel</a></li>
-              <li><a href="#">SPA</a></li>
-              <li><a href="#">QVC</a></li>
-              <li><a href="#">Proclaim|When</a></li>
+              <li><a href="#/reference/viewmodel">ViewModel</a></li>
+              <li><a href="#/reference/spa">SPA</a></li>
+              <li><a href="#/reference/qvc">QVC</a></li>
+              <li><a href="#/reference/proclaimWhen">Proclaim|When</a></li>
               <li class="divider"></li>
-              <li><a href="#">KnockoutJS</a></li>
-              <li><a href="#">RequireJS</a></li>
+              <li><a href="#/knockout">KnockoutJS</a></li>
+              <li><a href="#/require">RequireJS</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="main-container">
-      <nav class="sidebar">
-        <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Tutorial</a></li>
-          <li><a href="#">Reference</a></li>
-          <li><a href="#">Philosohy</a></li>
-          <li><a href="#">Articles</a></li>
-        </ul>
-      </nav>
-      <div class="main-content">
-        <div class="container">
-          <div class="jumbotron">
-            <h1>OrdnungJS</h1>
-          </div>
-        </div>
-      </div>
+    <div class="main-container" data-outlet>
+      
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/require.js" data-main="js/main"></script>
+    <script src="js/ordnung.min.js"></script>
   </body>
 </html>
