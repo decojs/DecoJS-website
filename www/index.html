@@ -16,7 +16,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation" data-viewmodel="index/NavbarVM">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -30,11 +30,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#/start">Get Started</a></li>
-          <li><a href="#/tutorial/">Tutorials</a></li>
-          <li class="dropdown">
+          <li data-bind="css:{active: active() == 'start'}"><a href="#/start">Get Started</a></li>
+          <li data-bind="css:{active: active() == 'tutorial'}"><a href="#/tutorial/">Tutorials</a></li>
+          <li data-bind="css:{active: active() == 'reference'}" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
             <ul class="dropdown-menu">
+              <li><a class="text-bold" href="#/reference/index">Reference</a></li>
+              <li class="divider"></li>
               <li><a href="#/reference/viewmodel">ViewModel</a></li>
               <li><a href="#/reference/spa">SPA</a></li>
               <li><a href="#/reference/qvc">QVC</a></li>
@@ -44,6 +46,8 @@
               <li><a href="#/require">RequireJS</a></li>
             </ul>
           </li>
+          <li data-bind="css:{active: active() == 'articles'}"><a href="#/articles/">Articles</a></li>
+          <li><a href="https://github.com/mariusGundersen/OrdnungJS">Source</a></li>
         </ul>
       </div>
     </nav>
