@@ -1,4 +1,11 @@
-define(["knockout"], function(ko){
+define(["knockout", "hljs"], function(ko, hljs){
+
+  ko.bindingHandlers.hljs = {
+    init: function(element, valueAccessor){
+      var lang = valueAccessor();
+      element.innerHTML = hljs.highlight(lang, element.textContent).value;
+    }
+  }
   
   ko.bindingHandlers.active = {
     update: function(element, valueAccessor, allBindings, context){

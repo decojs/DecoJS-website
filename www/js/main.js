@@ -6,7 +6,8 @@ require.config({
   paths:{
     "ordnung":"/js/ordnung",
     "knockout":"/js/knockout",
-    "customBindings":"/js/customBindings"
+    "customBindings":"/js/customBindings",
+    "hljs":"/js/highlight.pack"
   }
 });
 
