@@ -5,12 +5,13 @@ require.config({
 
   paths:{
     "ordnung":"/js/ordnung",
-    "knockout":"/js/knockout"
+    "knockout":"/js/knockout",
+    "customBindings":"/js/customBindings"
   }
 });
 
 
-require(["ordnung/spa"], function(spa){
+require(["ordnung/spa", "customBindings"], function(spa, customBindings){
   
   spa.start({
     pathToUrl: function(path){
