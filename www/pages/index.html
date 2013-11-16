@@ -15,7 +15,7 @@
 
   <div class="row featurette">
     <div class="col-md-7" data-viewmodel="index/FeaturetteVM">
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs tab-bar-code">
         <li data-bind="activate:tab, name:'page', initial: true"><a href="#">page.html</a></li>
         <li data-bind="activate:tab, name:'FirstVM'"><a href="#">FirstVM.js</a></li>
       </ul>
@@ -23,7 +23,7 @@
         <div class="tab-pane" data-bind="active:tab, name:'page'"><pre data-bind="hljs: 'xml'">
 &lt;div data-viewmodel="FirstVM"&gt;
   &lt;label&gt;First name&lt;/label&gt;&lt;br&gt;
-  &lt;input data-bind="value: firstName, valueUpdate:'afterkeydown'"&gt;&lt;br&gt;
+  &lt;input <em>data-bind="value: firstName, valueUpdate:'afterkeydown'"</em>&gt;&lt;br&gt;
   &lt;label&gt;Last name&lt;/label&gt;&lt;br&gt;
   &lt;input data-bind="value: lastName, valueUpdate:'afterkeydown'"&gt;&lt;br&gt;
   &lt;span data-bind="text: fullName"&gt;&lt;/span&gt;
@@ -44,7 +44,7 @@ define(['knockout'], function(ko){
     </div>
     <div class="col-md-5">
       <h2>Preview</h2>
-      <div data-viewmodel="index/FirstVM" class="well">
+      <div data-viewmodel="index/FirstVM" class="">
         <label>First name</label><br>
         <input data-bind="value: firstName, valueUpdate:'afterkeydown'"><br>
         <label>Last name</label><br>
