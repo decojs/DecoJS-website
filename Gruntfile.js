@@ -19,7 +19,8 @@ module.exports = function(grunt) {
           {expand: true, src: ['bower_components/jquery/jquery.min.js'], dest:'www/js/', flatten: true},
           {expand: true, src: ['bower_components/knockout.js/knockout.js'], dest:'www/js/', flatten: true},
           {expand: true, src: ['bower_components/requirejs/require.js'], dest:'www/js/', flatten: true},
-          {expand: true, src: ['bower_components/ordnung/Dist/ordnung.min.js'], dest:'www/js/', flatten: true},
+          {expand: true, src: ['bower_components/ordnung/Dist/ordnung.min.js'], dest:'www/js/ordnung/', flatten: true},
+          {expand: true, src: ['when.js', 'callbacks.js'], dest:'www/js/when', flatten: true, cwd:'bower_components/when'},
         ]
       }
     }

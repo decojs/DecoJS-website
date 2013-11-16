@@ -15,6 +15,6 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.1",
-    "ordnung": "~0.2.10"
+    "ordnung": "~0.2.12"
   }
 }

@@ -4,20 +4,26 @@ require.config({
   baseUrl:"/pages",
 
   paths:{
-    "ordnung":"/js/ordnung",
     "knockout":"/js/knockout",
     "customBindings":"/js/customBindings",
     "hljs":"/js/highlight.pack"
-  }
+  },
+
+  packages:[
+    {name:'ordnung', location:'/js/ordnung', main:'ordnung.min'},
+    {name: 'when', location: '/js/when', main: 'when' },
+  ]
 });
 
 
-require(["ordnung/spa", "customBindings"], function(spa, customBindings){
+require(["ordnung", "customBindings"], function(ordnung, customBindings){
   
-  spa.start({
-    pathToUrl: function(path){
-      return "/pages/"+path+".html";
+  ordnung.config({
+    spa:{
+      pathToUrl: function(path){
+        return "/pages/"+path+".html";
+      }
     }
-  });
+  }).start();
 
 });

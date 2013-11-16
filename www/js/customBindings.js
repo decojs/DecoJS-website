@@ -8,31 +8,31 @@ define(["knockout", "hljs"], function(ko, hljs){
   }
   
   ko.bindingHandlers.active = {
-    update: function(element, valueAccessor, allBindings, context){
+    update: function(element, valueAccessor, allBindings, viewModel, bindingContext){
       var value = valueAccessor();
       var name = ko.unwrap(allBindings().name);
       var selected = {active:value() == name};
-      ko.bindingHandlers.css.update(element, function(){return selected}, allBindings, context);
+      ko.bindingHandlers.css.update(element, function(){return selected}, allBindings, viewModel, bindingContext);
     }
   };
 
   ko.bindingHandlers.activate = {
-    init: function(element, valueAccessor, allBindings, context){
+    init: function(element, valueAccessor, allBindings, viewModel, bindingContext){
       var value = valueAccessor();
       var name = ko.unwrap(allBindings().name);
       var select = function(){
         value(name);
       };
-      ko.bindingHandlers.click.init(element, function(){return select}, allBindings, context);
+      ko.bindingHandlers.click.init(element, function(){return select}, allBindings, viewModel, bindingContext);
       if(allBindings().initial){
         value(name);
       }
     },
-    update: function(element, valueAccessor, allBindings, context){
+    update: function(element, valueAccessor, allBindings, viewModel, bindingContext){
       var value = valueAccessor();
       var name = ko.unwrap(allBindings().name);
       var selected = {active:value() == name};
-      ko.bindingHandlers.css.update(element, function(){return selected}, allBindings, context);
+      ko.bindingHandlers.css.update(element, function(){return selected}, allBindings, viewModel, bindingContext);
     }
   };
 
