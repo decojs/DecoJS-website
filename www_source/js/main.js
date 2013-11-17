@@ -4,14 +4,14 @@ require.config({
   baseUrl:'/pages',
 
   paths:{
-    'knockout': "bower_components/knockout.js/knockout",
-    'prism': "bower_components/prismjs/prism",
-    'customBindings': "js/customBindings"
+    'knockout': "../bower_components/knockout.js/knockout",
+    'prism': "../bower_components/prismjs/prism",
+    'customBindings': "../js/customBindings"
   },
 
   packages:[
-    {name:'ordnung', location:'bower_components/ordnung/Source/ordnung', main:'ordnung'},
-    {name: 'when', location: 'bower_components/when', main: 'when' },
+    {name:'ordnung', location:'../bower_components/ordnung/Source/ordnung', main:'ordnung'},
+    {name: 'when', location: '../bower_components/when', main: 'when' },
   ],
 
   shim: {    

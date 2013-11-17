@@ -15,9 +15,9 @@ module.exports = function(grunt) {
       //https://github.com/gruntjs/grunt-contrib-requirejs
       compile: {
         options: {
-          baseUrl: "www_source",
+          baseUrl: "www_source/pages",
           out: "www/js/main.js",
-          name: "js/main",
+          name: "../js/main",
           mainConfigFile: 'www_source/js/main.js',
           
           
