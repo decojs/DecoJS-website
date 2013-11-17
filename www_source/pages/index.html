@@ -20,7 +20,7 @@
         <li data-bind="activate:tab, name:'FirstVM'"><a href="#">FirstVM.js</a></li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane" data-bind="active:tab, name:'page'"><pre data-bind="hljs: 'xml'">
+        <div class="tab-pane" data-bind="active:tab, name:'page'"><pre data-bind="prism: 'xml'" class="language-markup"><code>
 &lt;div data-viewmodel="FirstVM"&gt;
   &lt;label&gt;First name&lt;/label&gt;&lt;br&gt;
   &lt;input <em>data-bind="value: firstName, valueUpdate:'afterkeydown'"</em>&gt;&lt;br&gt;
@@ -28,8 +28,8 @@
   &lt;input data-bind="value: lastName, valueUpdate:'afterkeydown'"&gt;&lt;br&gt;
   &lt;span data-bind="text: fullName"&gt;&lt;/span&gt;
 &lt;/div&gt;
-        </pre></div>
-        <div class="tab-pane" data-bind="active:tab, name:'FirstVM'"><pre data-bind="hljs: 'javascript'">
+        </code></pre></div>
+        <div class="tab-pane" data-bind="active:tab, name:'FirstVM'"><pre data-bind="prism: 'javascript'" class="language-javascript"><code>
 define(['knockout'], function(ko){
   return function FirstVM(){
     this.firstName = ko.observable("");
@@ -39,7 +39,7 @@ define(['knockout'], function(ko){
     }, this);
   };
 });
-        </pre></div>
+        </code></pre></div>
       </div>
     </div>
     <div class="col-md-5">

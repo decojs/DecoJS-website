@@ -1,9 +1,15 @@
-define(["knockout", "hljs"], function(ko, hljs){
+define(["knockout", "prism"], function(ko, Prism){
 
   ko.bindingHandlers.hljs = {
     init: function(element, valueAccessor){
       var lang = valueAccessor();
-      element.innerHTML = hljs.highlight(lang, element.textContent).value;
+      //element.innerHTML = hljs.highlight(lang, element.textContent).value;
+    }
+  }
+
+  ko.bindingHandlers.prism = {
+    init: function(element, valueAccessor){
+      Prism.highlightElement(element);
     }
   }
   

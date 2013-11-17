@@ -121,9 +121,10 @@ h4.code-title{
     border-top-right-radius: 5px;
 }
 
-h4.code-title + pre{
+h4.code-title + pre[class*="language-"]{
     border-top-left-radius: 0;
     border-top-right-radius:0;
+    margin: 0;
 }
 
 .nav-tabs.tab-bar-code{
@@ -134,16 +135,19 @@ h4.code-title + pre{
 }
 .nav-tabs.tab-bar-code li.active a{
   border-color: #CCC #CCC transparent #CCC;
-  background: #F5F5F5;
+  background: #f5f2f0;
 }
 
-.tab-pane>pre{
+.tab-pane pre[class*="language-"]{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: none;
+    margin: 0;
 }
 
-
+pre{
+  background: #f5f2f0;
+}
 
 
 
