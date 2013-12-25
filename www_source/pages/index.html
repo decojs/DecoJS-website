@@ -9,27 +9,31 @@
 
   <section class="row">
     <section class="col-md-6">
-      <h2>Declarative viewmodels</h2>
+      <h2><a href="#/philosophy/htmlFirst">HTML-first</a></h2>
+      <p>
+      Write modern HTML and add interaction using the <code>data-viewmodel</code> attribute. The correct JavaScript
+      files are automatically loaded and applied to the correct elements.
+      </p>
       <ul>
-        <li>JavaScript files can be loaded lazily when needed
-        <li>An element is controlled by one viewmodel only
-        <li>The HTML 
+        <li>JavaScript files will be loaded lazily when needed
+        <li>An element is controlled by one JavaScript file only
+        <li>Don't worry about loading scripts in the wrong order
       </ul>
     </section>
-    
     <section class="col-md-6">
-      <h2>Two-way bindings</h2>
+      <h2><a href="#/philosophy/twoWayBinding">Two-way bindings</a></h2>
       <p>
-      The JavaScript file is bound to the HTML with <code>data-bind</code>  using <a href="http://knockoutjs.com">KnockoutJS</a>.
+      The JavaScript file is bound to the HTML with <code>data-bind</code> using <a href="http://knockoutjs.com">KnockoutJS</a>.
       These bindings automatically update the DOM and the JavaScript when either one changes. 
       </p>
       <ul>
-        <li>The HTML tells you exactly what it does, you don't have to hunt through JavaScript files to find out
+        <li>The HTML tells you exactly what it does and only what it does
         <li>The view updates when it needs to, automatically
-        <li>The only thing an Element can do is what it says it can do
+        <li>The only thing an element can do is what it says it can do
       </ul>
     </section>
   </section>
+  <hr />
   <section class="row featurette">
     <div class="col-md-7" data-viewmodel="index/FeaturetteVM">
       <ul class="nav nav-tabs tab-bar-code">
@@ -70,23 +74,23 @@ define(['knockout'], function(ko){
       </div>
     </div>
   </section>
-
-  <section class="row">
-    
+  <hr />
+  <section class="row">  
     <section class="col-md-6">
-      <h2>Single-page application</h2>
+      <h2><a href="#/philosophy/longLivngPages">Long Living Pages</a></h2>
       <p>
-      Add interaction to your existing page, or start from scratch with
+      Add interactivity to your existing pages. A single main.js file lets you easily add functionality to multiple pages, 
+      without creating an entire Single Page application from scratch for every page
       </p>
       <ul>
-        <li>The HTML tells you exactly what it does, you don't have to hunt through JavaScript files to find out
-        <li>The view updates when it needs to, automatically
-        <li>The only thing an Element can do is what it says it can do
+        <li>Only one main.js file to bootstrap all your pages 
+        <li>Add multiple interactive areas to a single page
+        <li>Reuse modules across pages
       </ul>
     </section>
     
     <section class="col-md-6">
-      <h2>Multi-page application</h2>
+      <h2><a href="#/philosophy/multiPageApp">Multi-page application</a></h2>
       <p>
       DecoJS lets you work with both a frontend and server-side framework when creating your application. Continue to use the router, controllers
       and view-engine on the server, and add frontend functionality only where you need it.
@@ -99,21 +103,6 @@ define(['knockout'], function(ko){
     </section>
   </section>
 
-  <section class="row">
-    
-    <section class="col-md-6">
-      <h2>Multiple single-page applications</h2>
-      <p>
-      Don't start from scratch when you need interactivity on several pages; DecoJS lets you easily add JavaScript to any page on your webste. 
-      </p>
-    </section>
-    
-    <section class="col-md-6">
-      <h2>Multiple multi-page application</h2>
-      <p>
-      A single config file lets you create multiple applications of varying coplexity. Reuse pages and viewmodels across all these applications
-      </p>
-    </section>
-  </section>
+  
 </div>
 </div>
