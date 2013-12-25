@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.2",
-    "ordnung": "~0.2.12",
+    "deco": "0.3.0",
     "prismjs": "*"
   }
 }

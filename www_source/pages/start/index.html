@@ -5,13 +5,13 @@
       <h1>Get Started</h1>
       <p>Quickly get started with a single page application.
     </div>
-    <h2>How do I install OrdnungJS?</h2>
-    <p>The easiest way to install OrdnungJS is with <a href="https://github.com/bower/bower">bower</a>. Create an empty folder and run the following command to download OrdnungJS and all of its dependencies:
-    <pre>bower install ordnung</pre>
-    <p>This will also install <a href="http://requirejs.org">RequireJS</a>, <a href="http://knockoutjs.com">KnockoutJS</a>, and <a href="https://github.com/cujojs/when">WhenJS</a>; the three dependencies of OrdnungJS. It will also install <a href="https://github.com/douglascrockford/JSON-js">JSON</a> and <a href="https://github.com/kriskowal/es5-shim">es5-shim</a>, which are only needed for the project to work in IE8 and lower.</p>
+    <h2>How do I install DecoJS?</h2>
+    <p>The easiest way to install DecoJS is with <a href="https://github.com/bower/bower">bower</a>. Create an empty folder and run the following command to download DecoJS and all of its dependencies:
+    <pre>bower install deco</pre>
+    <p>This will also install <a href="http://requirejs.org">RequireJS</a>, <a href="http://knockoutjs.com">KnockoutJS</a>, and <a href="https://github.com/cujojs/when">WhenJS</a>; the three dependencies of DecoJS. It will also install <a href="https://github.com/douglascrockford/JSON-js">JSON</a> and <a href="https://github.com/kriskowal/es5-shim">es5-shim</a>, which are only needed for the project to work in IE8 and lower.</p>
 
     <h2>What webserver should I use?</h2>
-    <p><a href="http://www.senchalabs.org/connect/">Connect</a> is a simple webserver which only needs nodeJS to run. Install it in the same folder you installed OrdnungJS using this command:
+    <p><a href="http://www.senchalabs.org/connect/">Connect</a> is a simple webserver which only needs nodeJS to run. Install it in the same folder you installed DecoJS using this command:
     <pre>npm install connect</pre>
     <p>With connect installed you need a simple JavaScript file to start the server. Create a file called <code>server.js</code> in the same folder and write the following file into it:
     <h4 class="code-title">server.js</h4>
@@ -26,8 +26,8 @@ console.log("Webserver started at http://localhost/");
     <pre>node server.js</pre>
     <p>Open a browser and go to <a href="http://localhost/"><code>http://locahost/</code></a>
 
-    <h2>What is the simplest OrdnungJS website?</h2>
-    The simplest OrdnungJS website consists of two files; <code>index.html</code> and <code>main.js</code>. Copy the following code into a file name <code>index.html</code> in the same folder you placed server.js:
+    <h2>What is the simplest DecoJS website?</h2>
+    The simplest DecoJS website consists of two files; <code>index.html</code> and <code>main.js</code>. Copy the following code into a file name <code>index.html</code> in the same folder you placed server.js:
     <h4 class="code-title">index.html</h4>
     <pre data-bind="prism: 'html'" class="language-markup"><code>
 &lt;!doctype html&gt;
@@ -46,18 +46,18 @@ require.config({
   },
   
   packages:[
-    {name: 'ordnung', location: 'bower_components/ordnung/Source/ordnung', main: 'ordnung'},
+    {name: 'deco', location: 'bower_components/deco/Source/deco', main: 'deco'},
     {name: 'when', location: 'bower_components/when', main: 'when' },
   ]
 });
 
-require(['ordnung'], function(ordnung){
-  ordnung.config().start();
+require(['deco'], function(deco){
+  deco.config().start();
 });
     </code></pre>
 
     <h2>How do I add something dynamic to the site?</h2>
-    <p>OrdnungJS uses <a href="http://knockoutjs.com">KnockoutJS</a> to bind HTML and JavaScript together. You should go and read about KnockoutJS if you haven't used it before. 
+    <p>DecoJS uses <a href="http://knockoutjs.com">KnockoutJS</a> to bind HTML and JavaScript together. You should go and read about KnockoutJS if you haven't used it before. 
     <p>Add a new file to your project called <code>IndexVM.js</code> and copy the following code into it:
 
     <h4 class="code-title">IndexVM.js</h4>
@@ -92,7 +92,7 @@ define(['knockout'], function(ko){
     </code></pre>
 
     <h2>Now what?</h2>
-    Go read the <a href="#/tutorial/">tutorial</a>! It is a lot more indepth, explains the things we have already looked at and goes on to explain other more complex features of OrdnungJS. The <a href="#/article/">articles</a> explain specific features in even greater depth, and will teach you clever ways to solve common problems.
+    Go read the <a href="#/tutorial/">tutorial</a>! It is a lot more indepth, explains the things we have already looked at and goes on to explain other more complex features of DecoJS. The <a href="#/article/">articles</a> explain specific features in even greater depth, and will teach you clever ways to solve common problems.
 
     <h2>Do you have the code all in one place?</h2>
     <p>Here you go:
@@ -135,13 +135,13 @@ require.config({
   },
   
   packages:[
-    {name: 'ordnung', location: 'bower_components/ordnung/Source/ordnung', main: 'ordnung'},
+    {name: 'deco', location: 'bower_components/deco/Source/deco', main: 'deco'},
     {name: 'when', location: 'bower_components/when', main: 'when' },
   ]
 });
 
-require(['ordnung'], function(ordnung){
-  ordnung.config().start();
+require(['deco'], function(deco){
+  deco.config().start();
 });
       </code></pre></div>
       <div class="tab-pane" data-bind="active:tab, name:'IndexVM.js'"><pre data-bind="prism: 'javascript'" class="language-javascript"><code>

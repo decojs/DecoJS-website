@@ -1,5 +1,5 @@
 {
-  "name": "OrdnungjsCom",
+  "name": "DecoJSwebsite",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,8 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt": "~0.4.1",
     "grunt-bower-task": "~0.3.2",
-    "grunt-contrib-requirejs": "~0.4.1"
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3"
   },
   "dependencies": {
     "connect": "~2.11.0",

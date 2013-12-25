@@ -11,6 +11,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    watch: {
+      scripts: {
+        files: ['www_source/**'],
+        tasks: ['build'],
+        options: {
+          spawn: false,
+        },
+      },
+    },
     requirejs: {
       //https://github.com/gruntjs/grunt-contrib-requirejs
       compile: {
@@ -45,9 +54,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
   grunt.registerTask('install', ['bower']);
-  grunt.registerTask('build', ['requirejs'])
+  grunt.registerTask('build', ['requirejs', 'copy'])
 
 };

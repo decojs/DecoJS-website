@@ -2,20 +2,35 @@
 <div class="main-content">
 <div class="container">
   <div class="jumbotron">
-    <h1>OrdnungJS</h1>
-    <p>Build large maintainable single page applications</p>
+    <h1>DecoJS</h1>
+    <p>Scalable frontend architecture</p>
   </div>
   
-  <section>
-    <h2>Declarative viewmodels and bindings</h2>
-    <p>
-    Declarative viewmodels makes it trivial to connect JavaScript to your HTML. 
-    Use <code>data-viewmodel="path/to/viewmodel"</code> to apply a viewmodel to any HTML element.
-    By using <a href="http://knockoutjs.com">KnockoutJS</a> properties in the viewmodel can be bound to child elements
-    </p>
-  </section>
 
-  <div class="row featurette">
+  <section class="row">
+    <section class="col-md-6">
+      <h2>Declarative viewmodels</h2>
+      <ul>
+        <li>JavaScript files can be loaded lazily when needed
+        <li>An element is controlled by one viewmodel only
+        <li>The HTML 
+      </ul>
+    </section>
+    
+    <section class="col-md-6">
+      <h2>Two-way bindings</h2>
+      <p>
+      The JavaScript file is bound to the HTML with <code>data-bind</code>  using <a href="http://knockoutjs.com">KnockoutJS</a>.
+      These bindings automatically update the DOM and the JavaScript when either one changes. 
+      </p>
+      <ul>
+        <li>The HTML tells you exactly what it does, you don't have to hunt through JavaScript files to find out
+        <li>The view updates when it needs to, automatically
+        <li>The only thing an Element can do is what it says it can do
+      </ul>
+    </section>
+  </section>
+  <section class="row featurette">
     <div class="col-md-7" data-viewmodel="index/FeaturetteVM">
       <ul class="nav nav-tabs tab-bar-code">
         <li data-bind="activate:tab, name:'page', initial: true"><a href="#">page.html</a></li>
@@ -54,6 +69,51 @@ define(['knockout'], function(ko){
         <span data-bind="text: fullName"></span>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="row">
+    
+    <section class="col-md-6">
+      <h2>Single-page application</h2>
+      <p>
+      Add interaction to your existing page, or start from scratch with
+      </p>
+      <ul>
+        <li>The HTML tells you exactly what it does, you don't have to hunt through JavaScript files to find out
+        <li>The view updates when it needs to, automatically
+        <li>The only thing an Element can do is what it says it can do
+      </ul>
+    </section>
+    
+    <section class="col-md-6">
+      <h2>Multi-page application</h2>
+      <p>
+      DecoJS lets you work with both a frontend and server-side framework when creating your application. Continue to use the router, controllers
+      and view-engine on the server, and add frontend functionality only where you need it.
+      </p>
+      <ul>
+        <li>Create single page applications without a frontend router
+        <li>Use server-side controllers and views without conflicting with the frontend
+        <li>Create applications with multiple pages, not a single large page
+      </ul>
+    </section>
+  </section>
+
+  <section class="row">
+    
+    <section class="col-md-6">
+      <h2>Multiple single-page applications</h2>
+      <p>
+      Don't start from scratch when you need interactivity on several pages; DecoJS lets you easily add JavaScript to any page on your webste. 
+      </p>
+    </section>
+    
+    <section class="col-md-6">
+      <h2>Multiple multi-page application</h2>
+      <p>
+      A single config file lets you create multiple applications of varying coplexity. Reuse pages and viewmodels across all these applications
+      </p>
+    </section>
+  </section>
 </div>
 </div>

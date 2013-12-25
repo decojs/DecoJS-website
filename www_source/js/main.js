@@ -10,7 +10,7 @@ require.config({
   },
 
   packages:[
-    {name:'ordnung', location:'../bower_components/ordnung/Source/ordnung', main:'ordnung'},
+    {name:'deco', location:'../bower_components/deco/Source/deco', main:'deco'},
     {name: 'when', location: '../bower_components/when', main: 'when' },
   ],
 
@@ -22,9 +22,9 @@ require.config({
 });
 
 
-require(["ordnung", "customBindings"], function(ordnung, customBindings){
+require(["deco", "customBindings"], function(deco, customBindings){
   
-  ordnung.config({
+  deco.config({
     spa:{
       pathToUrl: function(path){
         return "/pages/"+path+".html";

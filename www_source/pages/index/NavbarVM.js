@@ -1,6 +1,6 @@
 define([
 	'knockout',
-	'ordnung/events'
+	'deco/events'
 ], function(
 	ko,
 	when
