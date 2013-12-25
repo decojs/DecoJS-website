@@ -2,6 +2,14 @@
 	margin-bottom: 0;
 }
 
+.jumbotron h1{
+  font-family: 'Poiret One', sans-serif;
+}
+.navbar-brand{
+  font-family: 'Poiret One', sans-serif;
+  font-size: 3em;
+}
+
 .sidebar{
 	width: 190px;
 	float: left;

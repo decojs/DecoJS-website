@@ -37,13 +37,30 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      //https://github.com/gruntjs/grunt-contrib-uglify
+      css: {
+        options: {
+          sourceMap: 'www/css/main.css.map'
+        },
+        files: {
+          'www/css/main.css': [
+            "www_source/bower_components/bootstrap/dist/css/bootstrap.min.css",
+            "www_source/bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
+            "www_source/css/theme.css",
+            "www_source/css/fonts.css",
+            "www_source/bower_components/prismjs/prism.css"
+          ]
+        }
+      }
+    },
     copy: {
       bower: {
         files: [
           {expand: true, src: ['www_source/bower_components/bootstrap/dist/css/*.min.css'], dest:'www/bower_components/bootstrap/dist/css/', flatten: true},
           {expand: true, src: ['www_source/bower_components/requirejs/require.js'], dest:'www/bower_components/requirejs/', flatten: true},
           {expand: true, src: ['www_source/bower_components/prismjs/prism.css'], dest:'www/bower_components/prismjs', flatten: true},
-          {expand: true, src: ['www_source/css/*.css'], dest:'www/css/', flatten: true},
+          {expand: true, src: ['www_source/css/fonts/*.woff'], dest:'www/css/fonts/', flatten: true},
           {expand: true, src: ['www_source/index.html'], dest:'www/', flatten: true},
           {expand: true, src: ['**'], dest:'www/pages', flatten: false, cwd:'www_source/pages'}
         ]
@@ -55,9 +72,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
   grunt.registerTask('install', ['bower']);
-  grunt.registerTask('build', ['requirejs', 'copy'])
+  grunt.registerTask('build', ['requirejs', 'cssmin', 'copy'])
 
 };
