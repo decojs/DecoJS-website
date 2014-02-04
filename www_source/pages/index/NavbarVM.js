@@ -13,7 +13,6 @@ define([
 		this.showNavbar = ko.observable(false);
 
 		function highlightTheCorrectLink(url, path){
-			console.log(path[0]);
 			self.active(path[0]);
 			self.showNavbar(false);
 		}

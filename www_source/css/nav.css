@@ -1,0 +1,85 @@
+
+.navbar{
+  border-radius: 0;
+  background: hsl(210, 50%, 10%);
+}
+
+.navbar .navbar-brand{
+  width: 190px;
+}
+
+.nav-tabs.nav-stacked{
+  border-bottom-width: 0px;
+  /*border-right: 1px solid #666;*/
+}
+
+.nav-tabs.nav-stacked li,
+.navbar .navbar-nav>li{
+  background: hsl(210, 50%, 10%);
+}
+.nav-tabs.nav-stacked li a{
+  color: #ccc;
+}
+
+.nav-tabs.nav-stacked li+li{
+  margin-top: 0;
+}
+
+.nav-tabs.nav-stacked>li:hover,
+.navbar .navbar-nav>li:hover{
+  border-color: transparent;
+  background: hsl(210, 50%, 20%);
+}
+.nav-tabs.nav-stacked>li:hover a,
+.navbar .navbar-nav>li:hover a{
+  border-color: transparent;
+  background: transparent;
+  border-radius: 0;
+  color: #ccc;
+}
+
+.nav-tabs.nav-stacked>li.active,
+.navbar .navbar-nav>li.active{
+  background: hsl(210, 50%, 20%);
+}
+
+.nav-tabs.nav-stacked>li.active::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  width: 15px;
+  height: 15px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right-color: white;
+  pointer-events: none;
+}
+
+@media (min-width: 768px){
+
+  .navbar .navbar-nav>li.active::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    width: 15px;
+    height: 15px;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom-color: white;
+    pointer-events: none;
+  }
+}
+.navbar .navbar-nav>li.active.dropdown.open::after{
+  display: none;
+}
+
+.nav-tabs.nav-stacked>li.active a,
+.navbar .navbar-nav>li.active a,
+.navbar .navbar-nav>li.active a:hover{
+  color: white;
+  border-color: transparent;
+  background: transparent;
+  border-radius: 0;
+}

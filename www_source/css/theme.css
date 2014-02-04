@@ -10,21 +10,22 @@
   font-size: 3em;
 }
 
-.sidebar{
-	width: 190px;
-	float: left;
-	position: relative;
-	background: hsl(0, 10%, 100%);
-}
-
 .main-content{
   padding-top: 20px;
-  position: relative;s
+  position: relative;
 }
 
 @media (min-width: 768px){
+  .main-content .container{
+    width: auto;
+  }
+}
+@media (min-width: 992px){
   .main-content{
     margin: 0 190px 500px 190px;
+  }
+  .main-content .container{
+    width: 800px;
   }
 }
 
@@ -39,90 +40,6 @@
 	border-bottom: 1px solid #CCC;
 }
 
-
-.navbar{
-	border-radius: 0;
-	background: hsl(210, 50%, 10%);
-}
-
-.navbar .navbar-brand{
-	width: 190px;
-}
-
-.nav-tabs.nav-stacked{
-	border-bottom-width: 0px;
-	/*border-right: 1px solid #666;*/
-}
-
-.nav-tabs.nav-stacked li,
-.navbar .navbar-nav>li{
-	background: hsl(210, 50%, 10%);
-}
-.nav-tabs.nav-stacked li a{
-	color: #ccc;
-}
-
-.nav-tabs.nav-stacked li+li{
-	margin-top:	0;
-}
-
-.nav-tabs.nav-stacked>li:hover,
-.navbar .navbar-nav>li:hover{
-	border-color: transparent;
-	background: hsl(210, 50%, 20%);
-}
-.nav-tabs.nav-stacked>li:hover a,
-.navbar .navbar-nav>li:hover a{
-	border-color: transparent;
-	background: transparent;
-	border-radius: 0;
-	color: #ccc;
-}
-
-.nav-tabs.nav-stacked>li.active,
-.navbar .navbar-nav>li.active{
-	background: hsl(210, 50%, 20%);
-}
-
-@media (min-width: 768px){
-  .nav-tabs.nav-stacked>li.active::after{
-  	content: "";
-  	position: absolute;
-  	top: 50%;
-  	right: -1px;
-  	width: 15px;
-  	height: 15px;
-  	margin-top: -15px;
-  	border: 15px solid transparent;
-  	border-right-color: white;
-  	pointer-events: none;
-  }
-
-  .navbar .navbar-nav>li.active::after{
-  	content: "";
-  	position: absolute;
-  	left: 50%;
-  	bottom: -1px;
-  	width: 15px;
-  	height: 15px;
-  	margin-left: -15px;
-  	border: 15px solid transparent;
-  	border-bottom-color: white;
-  	pointer-events: none;
-  }
-}
-.navbar .navbar-nav>li.active.dropdown.open::after{
-	display: none;
-}
-
-.nav-tabs.nav-stacked>li.active a,
-.navbar .navbar-nav>li.active a,
-.navbar .navbar-nav>li.active a:hover{
-	color: white;
-	border-color: transparent;
-	background: transparent;
-	border-radius: 0;
-}
 
 h4.code-title{
     border: 1px solid #ccc;
@@ -166,12 +83,28 @@ pre{
 }
 
 
+/**SIDEBAR**/
 
 
-@media (max-width: 768px){
+.sidebar{
+  width: 190px;
+  float: left;
+  position: relative;
+  background: hsl(0, 10%, 100%);
+
+  z-index: 2;
+}
+
+@media (max-width: 992px){
     
   .featurette .nav.nav-tabs{
   	margin-right: 0;
+  }
+
+  .sidebar[drag=true]{
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
   }
 
   .sidebar{
@@ -193,13 +126,14 @@ pre{
   }
   
   .main-content{
-   margin: 0 30px;
+    margin: 0 30px;
 	}
+
   .sidebar a{
       white-space: nowrap;
   }
   
-  .sidebar:hover{
+  .sidebar[pos=max]{
       -webkit-transform: translate(0, 0);
       -moz-transform: translate(0, 0);
       transform: translate(0, 0);
@@ -207,7 +141,7 @@ pre{
       -moz-transition: -moz-transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
       transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
-  .sidebar:hover + .main-content{
+  .sidebar[pos=max] + .main-content{
       -webkit-transform: translate(160px, 0);
       -moz-transform: translate(160px, 0);
       transform: translate(160px, 0);
