@@ -76,7 +76,7 @@ define(["knockout", "prism"], function(ko, Prism){
 
         var pos = value() < (minValue + maxValue)/2 ? 'min' : 'max';
         value(pos == 'min' ? minValue : maxValue);
-        ko.bindingHandlers.attr.update(element, function(){return {pos:pos, drag:'true'}}, allBindings, viewModel, bindingContext);
+        ko.bindingHandlers.attr.update(element, function(){return {pos:pos, drag:'false'}}, allBindings, viewModel, bindingContext);
       });
     },
     update: function(element, valueAccessor, allBindings, viewModel, bindingContext){
