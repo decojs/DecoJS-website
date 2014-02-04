@@ -48,6 +48,7 @@ module.exports = function(grunt) {
             "www_source/bower_components/bootstrap/dist/css/bootstrap.min.css",
             "www_source/bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
             "www_source/css/theme.css",
+            "www_source/css/nav.css",
             "www_source/css/fonts.css",
             "www_source/bower_components/prismjs/prism.css"
           ]
