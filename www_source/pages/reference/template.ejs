@@ -1,0 +1,14 @@
+<nav class="sidebar" data-viewmodel="philosophy/SidebarVM" data-bind="touchDrag: position, minValue:-160, maxValue:0">
+  <ul class="nav nav-tabs nav-stacked">
+    <li <%- data.active('index', file) %>><a href="#index">Reference</a></li>
+    <li <%- data.active('viewmodel', file) %>><a href="#viewmodel">Viewmodel</a></li>
+    <li <%- data.active('model', file) %>><a href="#model">Model</a></li>
+    <li <%- data.active('when', file) %>><a href="#when">When</a></li>
+    <li <%- data.active('qvc', file) %>><a href="#qvc">QVC</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+  <article class="container">
+      <%- contents %>
+  </article>
+</div>

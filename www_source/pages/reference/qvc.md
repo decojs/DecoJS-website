@@ -1,5 +1,8 @@
+<div class="page-header">
+  <h1>QVC</h1>
+</div>
 
-```
+```js
 define(['deco/qvc'], function(qvc){
   
   qvc.createCommand();
@@ -14,8 +17,7 @@ define(['deco/qvc'], function(qvc){
 ###Command
 
 
-```
-
+```js
 var observable = ko.observable("this property can be validated");
 
 var command = qvc.createCommand('commandName', {
@@ -44,8 +46,7 @@ observable.validator.isValid();//returns true or false
 
 ###Query
 
-```
-
+```js
 var observable = ko.observable("this property can be validated");
 
 var query = qvc.createQuery('queryName', {
