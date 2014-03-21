@@ -38,7 +38,7 @@ module.exports = function(grunt) {
       }
     },
     cssmin: {
-      //https://github.com/gruntjs/grunt-contrib-uglify
+      //https://github.com/gruntjs/grunt-contrib-cssmin
       css: {
         options: {
           sourceMap: 'www/css/main.css.map'
@@ -49,8 +49,8 @@ module.exports = function(grunt) {
             "www_source/bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
             "www_source/css/theme.css",
             "www_source/css/nav.css",
-            "www_source/css/fonts.css",
-            "www_source/bower_components/prismjs/prism.css"
+            "www_source/bower_components/highlight.js/src/styles/default.css",
+            "www_source/css/fonts.css"
           ]
         }
       }
@@ -77,6 +77,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('install', ['bower']);
-  grunt.registerTask('build', ['requirejs', 'cssmin', 'copy'])
+  grunt.registerTask('build', ['requirejs', 'cssmin', 'copy']);
 
 };
