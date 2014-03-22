@@ -1,7 +1,9 @@
-<div class="page-header">
+<div class="jumbotron">
   <h1>Philosophy</h1>
+  <p>How DecoJS is different
 </div>
-<p>DecoJS is written for large websites with multiple pages written by several people over the span of many years. In such a setting nobody
+    
+DecoJS is written for large websites with multiple pages written by several people over the span of many years. In such a setting nobody
 knows how large or complex the website will be or what new features will be added next year. This kind of website cannot be built as a single 
 page, where everything is loaded prior to the app starting. It cannot be bundled together into a single JS file which every user has to 
 download before the page is ready to function. It can only be built with lazy loading and modularity at its core.

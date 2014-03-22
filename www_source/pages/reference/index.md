@@ -1,5 +1,4 @@
-<div class="page-header">
+<div class="jumbotron">
   <h1>Reference</h1>
+  <p>Lookup all the features of DecoJS
 </div>
-
-<p>Lookup all the features of DecoJS

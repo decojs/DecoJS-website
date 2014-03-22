@@ -33,7 +33,7 @@ var paths = {
         'www_source/pages/**/*.md'
     ],
     'html': [
-        'www_source/pages/**/*.html'
+        'www_source/**/*.html'
     ],
     'fonts': [
         'www_source/css/fonts/*.woff'
@@ -63,6 +63,7 @@ var ejsOptions = {
 gulp.task('watch', function() {
     gulp.watch(paths.css, ['css']);
     gulp.watch(paths.pages, ['pages']);
+    gulp.watch(paths.html, ['html']);
     gulp.watch(paths.js, ['js']);
 });
 
@@ -86,7 +87,7 @@ gulp.task('js', function(){
 
 gulp.task('html', function(){
     gulp.src(paths.html)
-    .pipe(gulp.dest('www/pages'));
+    .pipe(gulp.dest('www'));
 });
 
 gulp.task('pages', function(){
