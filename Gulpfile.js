@@ -68,7 +68,7 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['html', 'pages', 'js', 'css', 'copy fonts'], function(){
+gulp.task('default', ['html', 'pages', 'js', 'css', 'fonts'], function(){
     
 });
 
