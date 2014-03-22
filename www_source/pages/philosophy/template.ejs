@@ -1,0 +1,14 @@
+<nav class="sidebar" data-viewmodel="philosophy/SidebarVM" data-bind="touchDrag: position, minValue:-160, maxValue:0">
+  <ul class="nav nav-tabs nav-stacked">
+    <li <%- data.active('index', file) %>><a href="#index">Philosophy</a></li>
+    <li <%- data.active('htmlFirst', file) %>><a href="#htmlFirst">HTML-First</a></li>
+    <li <%- data.active('twoWayBinding', file) %>><a href="#twoWayBinding">Two-way Binding</a></li>
+    <li <%- data.active('longLivingPages', file) %>><a href="#longLivingPages">Long Living Pages</a></li>
+    <li <%- data.active('multiPageApp', file) %>><a href="#multiPageApp">Multi-page Application</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+  <article class="container">
+      <%- contents %>
+  </article>
+</div>
