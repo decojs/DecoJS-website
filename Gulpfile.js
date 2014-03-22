@@ -54,7 +54,7 @@ var markdownOptions = {
 
 var ejsOptions = {
     active: function(name, file){
-      return file.path.indexOf('\\'+name+'.html') > 0 ? 'class="active"' : '';
+      return file.path.match(new RegExp('(\\/|\\\\)'+name+'\\.html$')) != null ? 'class="active"' : '';
     }
 };
 
