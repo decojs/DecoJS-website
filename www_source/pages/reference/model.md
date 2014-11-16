@@ -16,3 +16,5 @@ function MyVM(model, when){
     this.value = model.key;
 }
 ```
+
+`data-model` should contain json data, either a json object or a json array. If the content of `data-model` does not contain an object or an array, it will be treated as a string.

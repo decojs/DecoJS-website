@@ -10,5 +10,5 @@ DecoJS uses two-way binding, making it trivial to see what functionality is atta
 `data-bind` attribute, a glance at the element tells you right away everything it can do. Because the interaction is controlled by
 the `data-bind` attribute alone, you can quickly tell not only what it can do, but also what it cannot do. 
 
-Combine this with the `data-viewmodel` attribute and you can now quickly find the correct attribute in the right JavaScript file.
+Combine this with the `data-viewmodel` attribute and you can now quickly find the correct property in the right JavaScript file.
 DecoJS makes maintenance as simple as possible with these explicit relationships between the HTML and the JavaScript.

@@ -1,18 +1,5 @@
-define(["knockout", "prism"], function(ko, Prism){
+define(["knockout"], function(ko){
 
-  ko.bindingHandlers.hljs = {
-    init: function(element, valueAccessor){
-      var lang = valueAccessor();
-      //element.innerHTML = hljs.highlight(lang, element.textContent).value;
-    }
-  }
-
-  ko.bindingHandlers.prism = {
-    init: function(element, valueAccessor){
-      Prism.highlightElement(element);
-    }
-  }
-  
   ko.bindingHandlers.active = {
     update: function(element, valueAccessor, allBindings, viewModel, bindingContext){
       var value = valueAccessor();

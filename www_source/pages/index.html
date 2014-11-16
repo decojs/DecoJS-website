@@ -41,26 +41,24 @@
         <li data-bind="activate:tab, name:'FirstVM'"><a href="#">FirstVM.js</a></li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane" data-bind="active:tab, name:'page'"><pre data-bind="prism: 'xml'" class="language-markup"><code>
-&lt;div data-viewmodel="FirstVM"&gt;
-  &lt;label&gt;First name&lt;/label&gt;&lt;br&gt;
-  &lt;input <em>data-bind="value: firstName, valueUpdate:'afterkeydown'"</em>&gt;&lt;br&gt;
-  &lt;label&gt;Last name&lt;/label&gt;&lt;br&gt;
-  &lt;input data-bind="value: lastName, valueUpdate:'afterkeydown'"&gt;&lt;br&gt;
-  &lt;span data-bind="text: fullName"&gt;&lt;/span&gt;
-&lt;/div&gt;
-        </code></pre></div>
-        <div class="tab-pane" data-bind="active:tab, name:'FirstVM'"><pre data-bind="prism: 'javascript'" class="language-javascript"><code>
-define(['knockout'], function(ko){
-  return function FirstVM(){
-    this.firstName = ko.observable("");
-    this.lastName = ko.observable("");
-    this.fullName = ko.computed(function(){
-      return this.firstName() + " " + this.lastName();
-    }, this);
+        <div class="tab-pane" data-bind="active:tab, name:'page'"><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-viewmodel</span>=<span class="value">"FirstVM"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span>&gt;</span>First name<span class="tag">&lt;/<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">data-bind</span>=<span class="value">"textInput: firstName"</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span>&gt;</span>Last name<span class="tag">&lt;/<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">data-bind</span>=<span class="value">"textInput: lastName"</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">data-bind</span>=<span class="value">"text: fullName"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre></div>
+        <div class="tab-pane" data-bind="active:tab, name:'FirstVM'"><pre><code class="lang-js">define([<span class="string">'knockout'</span>], <span class="function"><span class="keyword">function</span><span class="params">(ko)</span>{</span>
+  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">FirstVM</span><span class="params">()</span>{</span>
+    <span class="keyword">this</span>.firstName = ko.observable(<span class="string">""</span>);
+    <span class="keyword">this</span>.lastName = ko.observable(<span class="string">""</span>);
+    <span class="keyword">this</span>.fullName = ko.computed(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+      <span class="keyword">return</span> <span class="keyword">this</span>.firstName() + <span class="string">" "</span> + <span class="keyword">this</span>.lastName();
+    }, <span class="keyword">this</span>);
   };
 });
-        </code></pre></div>
+</code></pre></div>
       </div>
     </div>
     <div class="col-md-5">
