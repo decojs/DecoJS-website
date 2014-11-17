@@ -55,6 +55,7 @@ gulp.task('js', function(){
       return stream
       .pipe(requirejs(requirejsOptions, {exclude: ["knockout", "deco"]}))
       .pipe(concat(file.relative))
+      .pipe(onlyIf(minify, uglify()))
       .pipe(gulp.dest('www/pages'))
     }));
 });
@@ -80,7 +81,7 @@ gulp.task('mainjs', function(){
   return gulp.src('www_source/js/main.js')
   .pipe(requirejs(requirejsOptions, {umd: true}))
   .pipe(concat('main.js'))
-  .pipe(onlyIf(minify, uglify({outSourceMap: true})))
+  .pipe(onlyIf(minify, uglify()))
   .pipe(gulp.dest('www/js/'));
 });
 
