@@ -80,7 +80,7 @@ gulp.task('mainjs', function(){
   return gulp.src('www_source/js/main.js')
   .pipe(requirejs(requirejsOptions, {umd: true}))
   .pipe(concat('main.js'))
-    //.pipe(onlyIf(minify, uglify({outSourceMap: true})))
+  .pipe(onlyIf(minify, uglify({outSourceMap: true})))
   .pipe(gulp.dest('www/js/'));
 });
 
@@ -90,7 +90,7 @@ gulp.task('mainjs', function(){
 
 
 
-var minify = false;
+var minify = true;
 
 var paths = {
     'css': [
