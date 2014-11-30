@@ -12,6 +12,8 @@ var requirejs = require('gulp-amd-optimizer');
 var foreach = require('gulp-foreach');
 var uglify = require('gulp-uglify');
 var onlyIf = require('gulp-if');
+var express = require("express");
+
 
 /*
 var renderer = new marked.Renderer();
@@ -22,7 +24,7 @@ renderer.image = function (href, title, text) {
 
 
 
-gulp.task('watch', ['default'], function() {
+gulp.task('watch', ['default', 'server'], function() {
     gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
     gulp.watch(paths.pages, ['pages']);
@@ -35,6 +37,9 @@ gulp.task('default', ['pages', 'js', 'css', 'fonts', 'mainjs', 'bower'], functio
     
 });
 
+gulp.task('server', function(){
+  express().use(express.static(__dirname+"/www")).listen(80);
+});
 
 gulp.task('css', function(){
     return gulp.src(paths.css)
