@@ -58,7 +58,13 @@ gulp.task('js', function(){
     .pipe(foreach(function(stream, file){
       console.log("stream file", file.relative, file.cwd);
       return stream
-      .pipe(requirejs(requirejsOptions, {exclude: ["knockout", "deco"]}))
+      .pipe(requirejs(requirejsOptions, {
+        exclude: [
+          "knockout", 
+          "deco", 
+          "piwik"
+        ]
+      }))
       .pipe(concat(file.relative))
       .pipe(onlyIf(minify, uglify()))
       .pipe(gulp.dest('www/pages'))

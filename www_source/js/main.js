@@ -6,7 +6,8 @@ require.config({
   paths:{
     'knockout': "../bower_components/knockout/dist/knockout",
     'prism': "../bower_components/prismjs/prism",
-    'customBindings': "../js/customBindings"
+    'customBindings': "../js/customBindings",
+    'piwik': "//analytics.decojs.com/piwik"
   },
 
   packages:[
