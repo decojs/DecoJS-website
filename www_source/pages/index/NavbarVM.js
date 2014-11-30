@@ -3,26 +3,26 @@ define([
 	'deco/events'
 ], function(
 	ko,
-	when
+	events
 ){
 	
-	return function NavbarVM(){
+	return function NavbarVM(model, when){
 		var self = this;
 
 		this.active = ko.observable("");
 		this.showNavbar = ko.observable(false);
 
-		function highlightTheCorrectLink(url, path){
-			self.active(path[0]);
-			self.showNavbar(false);
-		}
-
 		this.toggleNavbar = function(){
 			self.showNavbar(!self.showNavbar());
 		}
+    
+		function highlightTheCorrectLink(url, segments){
+			self.active(segments[0]);
+			self.showNavbar(false);
+		}
 
 		init: {
-			when.thePageHasChanged(highlightTheCorrectLink);
+			when(events.thePageHasChanged, highlightTheCorrectLink);
 		}
 	};
 
