@@ -41,21 +41,21 @@
         <li data-bind="activate:tab, name:'FirstVM'"><a href="#">FirstVM.js</a></li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane" data-bind="active:tab, name:'page'"><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-viewmodel</span>=<span class="value">"FirstVM"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">label</span>&gt;</span>First name<span class="tag">&lt;/<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">data-bind</span>=<span class="value">"textInput: firstName"</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">label</span>&gt;</span>Last name<span class="tag">&lt;/<span class="title">label</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">data-bind</span>=<span class="value">"textInput: lastName"</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">data-bind</span>=<span class="value">"text: fullName"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <div class="tab-pane" data-bind="active:tab, name:'page'"><pre><code class="hljs-lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">data-viewmodel</span>=<span class="hljs-value">"FirstVM"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>First name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">data-bind</span>=<span class="hljs-value">"textInput: firstName"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Last name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">data-bind</span>=<span class="hljs-value">"textInput: lastName"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">data-bind</span>=<span class="hljs-value">"text: fullName"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre></div>
-        <div class="tab-pane" data-bind="active:tab, name:'FirstVM'"><pre><code class="lang-js">define([<span class="string">'knockout'</span>], <span class="function"><span class="keyword">function</span><span class="params">(ko)</span>{</span>
-  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">FirstVM</span><span class="params">()</span>{</span>
-    <span class="keyword">this</span>.firstName = ko.observable(<span class="string">""</span>);
-    <span class="keyword">this</span>.lastName = ko.observable(<span class="string">""</span>);
-    <span class="keyword">this</span>.fullName = ko.computed(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-      <span class="keyword">return</span> <span class="keyword">this</span>.firstName() + <span class="string">" "</span> + <span class="keyword">this</span>.lastName();
-    }, <span class="keyword">this</span>);
+        <div class="tab-pane" data-bind="active:tab, name:'FirstVM'"><pre><code class="lang-js">define([<span class="hljs-string">'knockout'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(ko)</span>{</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FirstVM</span><span class="hljs-params">()</span>{</span>
+    <span class="hljs-keyword">this</span>.firstName = ko.observable(<span class="hljs-string">""</span>);
+    <span class="hljs-keyword">this</span>.lastName = ko.observable(<span class="hljs-string">""</span>);
+    <span class="hljs-keyword">this</span>.fullName = ko.computed(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName() + <span class="hljs-string">" "</span> + <span class="hljs-keyword">this</span>.lastName();
+    }, <span class="hljs-keyword">this</span>);
   };
 });
 </code></pre></div>

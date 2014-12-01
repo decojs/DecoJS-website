@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.2",
-    "deco": "0.5.0"
+    "deco": "0.5.0",
+    "highlightjs": "~8.3.0"
   }
 }

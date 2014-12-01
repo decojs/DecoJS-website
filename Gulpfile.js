@@ -28,12 +28,12 @@ gulp.task('watch', ['default', 'server'], function() {
     gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
     gulp.watch(paths.pages, ['pages']);
-    gulp.watch(paths.js, ['js']);
+    gulp.watch(paths.js.concat(paths.templates), ['js']);
     gulp.watch(paths.mainjs, ['mainjs']);
 });
 
 
-gulp.task('default', ['pages', 'js', 'css', 'fonts', 'mainjs', 'bower'], function(){
+gulp.task('default', ['html', 'pages', 'js', 'css', 'fonts', 'mainjs', 'bower'], function(){
     
 });
 
@@ -102,7 +102,7 @@ gulp.task('mainjs', function(){
 
 
 
-var minify = true;
+var minify = false;
 
 var paths = {
     'css': [
@@ -110,7 +110,7 @@ var paths = {
         "www_source/bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
         "www_source/css/theme.css",
         "www_source/css/nav.css",
-        "www_source/bower_components/highlight.js/src/styles/default.css",
+        "www_source/bower_components/highlightjs/styles/sunburst.css",
         "www_source/css/fonts.css"
     ],
     'js': [
@@ -121,6 +121,9 @@ var paths = {
     ],
     'pages':[
         'www_source/pages/**/*.md'
+    ],
+    'templates':[
+        'www_source/pages/**/*.ejs'
     ],
     'html': [
         'www_source/**/*.html'
@@ -135,7 +138,7 @@ var paths = {
 }
 
 highlight.configure({
-    classPrefix: ""
+    classPrefix: "hljs-"
 });
 
 var markdownOptions = {

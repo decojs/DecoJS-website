@@ -48,44 +48,55 @@
 
 
 h4{
-    border: 1px solid #ccc;
-    border-bottom: none;
-    margin-bottom: 0;
-    padding: 5px 10px;
-    background: #fdfdfd;
-    font-size: 1em;
-    font-weight: 100;
-    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  border: none;
+  border-bottom: none;
+  color: white;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  background: #19334C;
+  font-size: 1em;
+  font-weight: 100;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 h4 + pre{
-    border-top-left-radius: 0;
-    border-top-right-radius:0;
-    margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius:0;
+  margin-top: 0;
 }
 
 .nav-tabs.tab-bar-code{
-  border-bottom: 1px solid #CCC;
+  border-bottom: 0px solid #CCC;
 }
 .nav-tabs.tab-bar-code li a{
   outline: none;
+  border: none;
 }
-.nav-tabs.tab-bar-code li.active a{
-  border-color: #CCC #CCC transparent #CCC;
-  background: #f5f2f0;
+.nav-tabs.tab-bar-code li.active a,
+.nav-tabs.tab-bar-code li.active a:hover,
+.nav-tabs.tab-bar-code li.active a:focus{
+  border: none;
+  background: #19334C;
+  color: white;
+}
+.nav-tabs.tab-bar-code li a:hover,
+.nav-tabs.tab-bar-code li a:focus{
+  background: transparent;
 }
 
 .tab-pane pre[class*="language-"]{
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-top: none;
-    margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  margin-top: 0;
 }
 
 pre{
-  background: #f5f2f0;
+  background: #0C1926;
+  color: #E0E2E4;
+  border: none;
 }
 
 
