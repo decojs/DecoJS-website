@@ -1,0 +1,11 @@
+<nav class="sidebar" data-viewmodel="philosophy/SidebarVM" data-bind="touchDrag: position, minValue:-160, maxValue:0">
+  <ul class="nav nav-tabs nav-stacked">
+    <li <%- data.active('index', file) %>><a href="#index">Advent Calendar</a></li>
+    <li <%- data.active('01', file) %>><a href="#01">Desember 1st</a></li>
+  </ul>
+</nav>
+<div class="main-content">
+  <article class="container">
+      <%- contents %>
+  </article>
+</div>
