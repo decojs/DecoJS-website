@@ -33,7 +33,7 @@ gulp.task('watch', ['default', 'server'], function() {
 });
 
 
-gulp.task('default', ['html', 'pages', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){
+gulp.task('default', ['html', 'pages', 'ejs', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){
     
 });
 
@@ -88,6 +88,12 @@ gulp.task('pages', function(){
     .pipe(gulp.dest('www/pages'));
 });
 
+gulp.task('ejs', function(){
+    return gulp.src(paths.ejs)
+    .pipe(ejs(ejsOptions))
+    .pipe(gulp.dest('www/'));
+});
+
 gulp.task('fonts', function(){
     gulp.src(paths.fonts)
     .pipe(gulp.dest('www/css/fonts/'));
@@ -107,7 +113,7 @@ gulp.task('mainjs', function(){
 
 
 
-var minify = false;
+var minify = true;
 
 var paths = {
     'css': [
@@ -132,6 +138,9 @@ var paths = {
     ],
     'templates':[
         'www_source/pages/**/*.ejs'
+    ],
+    'ejs':[
+        'www_source/index.ejs'
     ],
     'html': [
         'www_source/**/*.html'
@@ -160,6 +169,9 @@ var markdownOptions = {
 var ejsOptions = {
     active: function(name, file){
       return file.path.match(new RegExp('(\\/|\\\\)'+name+'\\.html$')) != null ? 'class="active"' : '';
+    },
+    buildDate: function(){
+      return new Date().toISOString();
     }
 };
 
