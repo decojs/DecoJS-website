@@ -27,8 +27,8 @@ renderer.image = function (href, title, text) {
 gulp.task('watch', ['default', 'server'], function() {
     gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
-    gulp.watch(paths.pages, ['pages']);
-    gulp.watch(paths.js.concat(paths.templates), ['js']);
+    gulp.watch(paths.pages.concat(paths.templates), ['pages']);
+    gulp.watch(paths.js, ['js']);
     gulp.watch(paths.mainjs, ['mainjs']);
 });
 
