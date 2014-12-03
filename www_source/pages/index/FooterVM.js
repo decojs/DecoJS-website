@@ -5,7 +5,7 @@ define(['deco/events', 'piwik'], function(events, Piwik){
     
     when(events.thePageHasChanged, function(url, segments){
       tracker.setCustomUrl('/'+segments.join('/'));
-      tracker.trackPageView();
+      tracker.trackPageView(document.title);
     });
   };
 });
