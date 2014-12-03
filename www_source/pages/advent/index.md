@@ -1,3 +1,5 @@
+<meta name="title" content="Advent Calendar - DecoJS">
+
 <div class="jumbotron">
   <h1>Advent Calendar</h1>
   <p>Simple tips and tricks every day until Christmas

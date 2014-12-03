@@ -1,3 +1,5 @@
+<meta name="title" content="When - DecoJS">
+
 <div class="page-header">
   <h1>When</h1>
 </div>

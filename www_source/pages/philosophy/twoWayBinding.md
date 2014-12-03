@@ -1,3 +1,5 @@
+<meta name="title" content="Two-way Binding - DecoJS">
+
 <div class="page-header">
   <h1>Two-way Binding</h1>
 </div>

@@ -1,3 +1,5 @@
+<meta name="title" content="HTML-first - DecoJS">
+
 <div class="page-header">
   <h1>HTML-first</h1>
 </div>
