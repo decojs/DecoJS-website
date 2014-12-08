@@ -1,0 +1,22 @@
+<!doctype html>
+
+<div data-outlet></div>
+
+<script type="text/page-template" id="index">
+  <h1>Index</h1>
+  <a href="#page2">Go to page 2</a>
+</script>
+
+<script type="text/page-template" id="page2">
+  <h1>Page2</h1>
+  <a href="#index">Go back to index</a><br>
+  <a href="#page3">Go to a page that doesn't exist</a>
+</script>
+
+<script type="text/page-template" id="Error404">
+  <h1>Oops, 404 not found</h1>
+  <p>You have gone to a page that doesn't exist!</p>
+  <a href="#index">Go back to index</a>
+</script>
+
+<script src="/bower_components/requirejs/require.js" data-main="main"></script>
