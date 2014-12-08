@@ -27,13 +27,14 @@ renderer.image = function (href, title, text) {
 gulp.task('watch', ['default', 'server'], function() {
     gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
+    gulp.watch(paths.exmaples, ['examples']);
     gulp.watch(paths.pages.concat(paths.templates), ['pages']);
     gulp.watch(paths.js, ['js']);
     gulp.watch(paths.mainjs, ['mainjs']);
 });
 
 
-gulp.task('default', ['html', 'pages', 'ejs', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){
+gulp.task('default', ['html', 'examples', 'pages', 'ejs', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){
     
 });
 
@@ -56,6 +57,11 @@ gulp.task('bower', function(){
 gulp.task('img', function(){
     return gulp.src(paths.pageImages)
     .pipe(gulp.dest('www/pages'));
+});
+
+gulp.task('examples', function(){
+    return gulp.src(paths.exmaples)
+    .pipe(gulp.dest('www/examples'));
 });
 
 gulp.task('js', function(){
@@ -130,6 +136,9 @@ var paths = {
     'mainjs': [
         'www_source/js/**/*.js'
     ],
+    'exmaples':[
+        'www_source/examples/**/*'
+    ],
     'pages':[
         'www_source/pages/**/*.md'
     ],
@@ -150,7 +159,9 @@ var paths = {
     ],
     'bower': [
         'www_source/bower_components/es6-promise/promise.js',
-        'www_source/bower_components/requirejs/require.js'
+        'www_source/bower_components/requirejs/require.js',
+        'www_source/bower_components/deco/{Source,Dist}/**/*.js',
+        'www_source/bower_components/knockout/dist/knockout.js'
     ]
 }
 

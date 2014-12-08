@@ -1,0 +1,18 @@
+<!doctype html>
+
+<div data-outlet></div>
+
+<script type="text/page-template" id="index">
+  <h1>Index</h1>
+  <a href="#page2">Go to page 2</a>
+</script>
+
+<script type="text/page-template" id="page2">
+  <h1>Page2</h1>
+  <a href="#index">Go back to index</a>
+  <div data-viewmodel="Page2VM">
+    <span data-bind="text: description"></span>
+  </div>
+</script>
+
+<script src="/bower_components/requirejs/require.js" data-main="main"></script>
