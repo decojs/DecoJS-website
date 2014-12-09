@@ -28,13 +28,13 @@ gulp.task('watch', ['default', 'server'], function() {
     gulp.watch(paths.css, ['css']);
     gulp.watch(paths.html, ['html']);
     gulp.watch(paths.exmaples, ['examples']);
-    gulp.watch(paths.pages, ['pages']);
-    gulp.watch(paths.js.concat(paths.templates), ['js']);
+    gulp.watch(paths.pages.concat(paths.templates), ['pages']);
+    gulp.watch(paths.js, ['js']);
     gulp.watch(paths.mainjs, ['mainjs']);
 });
 
 
-gulp.task('default', ['html', 'examples', 'pages', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){
+gulp.task('default', ['html', 'examples', 'pages', 'ejs', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){
     
 });
 
@@ -94,6 +94,12 @@ gulp.task('pages', function(){
     .pipe(gulp.dest('www/pages'));
 });
 
+gulp.task('ejs', function(){
+    return gulp.src(paths.ejs)
+    .pipe(ejs(ejsOptions))
+    .pipe(gulp.dest('www/'));
+});
+
 gulp.task('fonts', function(){
     gulp.src(paths.fonts)
     .pipe(gulp.dest('www/css/fonts/'));
@@ -113,7 +119,7 @@ gulp.task('mainjs', function(){
 
 
 
-var minify = false;
+var minify = true;
 
 var paths = {
     'css': [
@@ -141,6 +147,9 @@ var paths = {
     ],
     'templates':[
         'www_source/pages/**/*.ejs'
+    ],
+    'ejs':[
+        'www_source/index.ejs'
     ],
     'html': [
         'www_source/**/*.html'
@@ -171,6 +180,9 @@ var markdownOptions = {
 var ejsOptions = {
     active: function(name, file){
       return file.path.match(new RegExp('(\\/|\\\\)'+name+'\\.html$')) != null ? 'class="active"' : '';
+    },
+    buildDate: function(){
+      return new Date().toISOString();
     }
 };
 

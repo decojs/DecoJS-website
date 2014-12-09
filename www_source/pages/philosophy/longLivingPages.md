@@ -1,3 +1,5 @@
+<meta name="title" content="Long Living Pages - DecoJS">
+
 <div class="page-header">
   <h1>Long Living Pages</h1>
 </div>

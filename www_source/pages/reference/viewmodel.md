@@ -1,3 +1,5 @@
+<meta name="title" content="Viewmodel - DecoJS">
+
 <div class="page-header">
   <h1>Viewmodel</h1>
 </div>

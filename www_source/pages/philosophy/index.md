@@ -1,3 +1,5 @@
+<meta name="title" content="Philosophy - DecoJS">
+
 <div class="jumbotron">
   <h1>Philosophy</h1>
   <p>How DecoJS is different

@@ -1,3 +1,5 @@
+<meta name="title" content="Get Started - DecoJS">
+
 <div class="jumbotron">
   <h1>Get Started</h1>
   <p>Quickly get started with a single page application.

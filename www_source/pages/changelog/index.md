@@ -1,8 +1,12 @@
 
+### [0.5.2](https://github.com/decojs/DecoJS/releases/tag/v0.5.2)
+
+ * Fixed an issue where relative paths in the url fragment could cause an infinite JS loop
+
+
 ### [0.5.1](https://github.com/decojs/DecoJS/releases/tag/v0.5.1)
 
  * Fixed nested data-viewmodel could not be used inside foreach bindings ([issue 15](https://github.com/decojs/DecoJS/issues/15))
-
 
 
 ### [0.5.0](https://github.com/decojs/DecoJS/releases/tag/v0.5.0)

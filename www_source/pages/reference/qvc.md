@@ -1,3 +1,5 @@
+<meta name="title" content="QVC - DecoJS">
+
 <div class="page-header">
   <h1>QVC</h1>
 </div>
