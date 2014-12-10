@@ -17,3 +17,4 @@ Every day until Christmas a new short article about DecoJS will be posted here. 
 8.  [Routing and templates](#08)
 9.  [Error templates](#09)
 10. [Lazy loading views](#10)
+11. [Relative urls](#11)
