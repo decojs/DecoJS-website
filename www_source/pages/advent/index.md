@@ -20,3 +20,4 @@ Every day until Christmas a new short article about DecoJS will be posted here. 
 11. [Relative urls](#11)
 12. [Caching views](#12)
 13. [Page change event](#13)
+14. [Page title](#14)
