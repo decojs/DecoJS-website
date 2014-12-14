@@ -1,4 +1,12 @@
 
+## [0.5.3](https://github.com/decojs/DecoJS/releases/tag/v0.5.2)
+
+ * Fixed a bug where nested viewmodels weren't cleaned up correctly, which could break the application ([issue 19](https://github.com/decojs/DecoJS/issues/19))
+ * Made it possible to pass data into nested viewmodels using data-params
+ * Made sure an error is thrown if the same observable is used in multiple executables ([issue 2](https://github.com/decojs/DecoJS/issues/2))
+ * Exposed isValid directly on the observables that are used as parameters to executabse
+
+
 ### [0.5.2](https://github.com/decojs/DecoJS/releases/tag/v0.5.2)
 
  * Fixed an issue where relative paths in the url fragment could cause an infinite JS loop
