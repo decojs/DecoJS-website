@@ -21,4 +21,5 @@ Every day until Christmas a new short article about DecoJS will be posted here. 
 12. [Caching views](#12)
 13. [Page change event](#13)
 14. [Page title](#14)
-14. [Nested viewmodels](#15)
+15. [Nested viewmodels](#15)
+16. [Loading indicator](#16)
