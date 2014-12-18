@@ -24,3 +24,4 @@ Every day until Christmas a new short article about DecoJS will be posted here. 
 15. [Nested viewmodels](#15)
 16. [Loading indicator](#16)
 17. [QVC](#17)
+18. [Is Busy](#18)
