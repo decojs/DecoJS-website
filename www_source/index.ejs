@@ -10,7 +10,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <meta name="cachebust" content="<%- buildDate() %>">
+    <meta name="cachebust" content="<%- data.buildDate() %>">
+    <meta name="fragment" content="!">
   </head>
   <body>
     <nav class="navbar navbar-inverse" role="navigation" data-viewmodel="index/NavbarVM">
@@ -27,24 +28,25 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" data-bind="css: { in: showNavbar }">
         <ul class="nav navbar-nav">
-          <li data-bind="css:{active: active() == 'start'}"><a href="#/start/">Get Started</a></li>
-          <li data-bind="css:{active: active() == 'advent'}"><a href="#/advent/">Advent Calendar</a></li>
-          <li data-bind="css:{active: active() == 'reference'}"><a href="#/reference/" >Reference</a></li>
+          <li data-bind="css:{active: active() == 'start'}"><a href="#!/start/">Get Started</a></li>
+          <li data-bind="css:{active: active() == 'advent'}"><a href="#!/advent/">Advent Calendar</a></li>
+          <li data-bind="css:{active: active() == 'reference'}"><a href="#!/reference/" >Reference</a></li>
           <!--<li data-bind="css:{active: active() == 'articles'}"><a href="#/article/">Articles</a></li>-->
-          <li data-bind="css:{active: active() == 'philosophy'}"><a href="#/philosophy/">Philosophy</a></li>
-          <li data-bind="css:{active: active() == 'changelog'}"><a href="#/changelog/">Changelog</a></li>
+          <li data-bind="css:{active: active() == 'philosophy'}"><a href="#!/philosophy/">Philosophy</a></li>
+          <li data-bind="css:{active: active() == 'changelog'}"><a href="#!/changelog/">Changelog</a></li>
           <li><a href="https://github.com/decojs/DecoJS">Source</a></li>
         </ul>
       </div>
     </nav>
     
-    <div class="main-container" data-outlet>
+    <div class="main-container" <%- contents === '' ? 'data-outlet' : '' %>>
+      <%- contents %>
     </div>
     
     <footer data-viewmodel="index/FooterVM">
     </footer>
     
-    <script src="bower_components/es6-promise/promise.js"></script>
-    <script src="bower_components/requirejs/require.js" data-main="js/main"></script>
+    <script src="/bower_components/es6-promise/promise.js"></script>
+    <script src="/bower_components/requirejs/require.js" data-main="js/main"></script>
   </body>
 </html>

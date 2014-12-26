@@ -1,5 +1,5 @@
 {
-  "name": "OrdnungjsCom",
+  "name": "DecoJSwebsite",
   "version": "0.0.0",
   "authors": [
     "Marius Gundersen <me@mariusgundersen.net>"
@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.2",
-    "deco": "~0.5.2",
+    "deco": "~0.6.0",
     "highlightjs": "~8.3.0"
   }
 }

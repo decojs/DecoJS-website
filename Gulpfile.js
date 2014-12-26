@@ -12,15 +12,7 @@ var requirejs = require('gulp-amd-optimizer');
 var foreach = require('gulp-foreach');
 var uglify = require('gulp-uglify');
 var onlyIf = require('gulp-if');
-var express = require("express");
-
-
-/*
-var renderer = new marked.Renderer();
-
-renderer.image = function (href, title, text) {
-  return '<a class="imageLink" href="<%= MEDIA_PREFIX %>/img/'+href+'"><img src="<%= MEDIA_PREFIX %>/img/small/'+href+'" /></a>';
-};*/
+var express = require('express');
 
 
 
@@ -91,12 +83,14 @@ gulp.task('pages', function(){
     return gulp.src(paths.pages)
     .pipe(markdown(markdownOptions))
     .pipe(wrap({src: 'template.ejs'}, ejsOptions))
-    .pipe(gulp.dest('www/pages'));
+    .pipe(gulp.dest('www/pages'))
+    .pipe(wrap({src: 'www_source/index.ejs'}, ejsOptions))
+    .pipe(gulp.dest('www/snapshot'));
 });
 
 gulp.task('ejs', function(){
     return gulp.src(paths.ejs)
-    .pipe(ejs(ejsOptions))
+    .pipe(ejs({contents:'', data:ejsOptions}))
     .pipe(gulp.dest('www/'));
 });
 
@@ -174,16 +168,15 @@ var markdownOptions = {
         return (lang ? highlight.highlight(lang, code) : highlight.highlightAuto(code)).value;
     },
     gfm: true
-    //renderer: renderer
 };
 
 var ejsOptions = {
-    active: function(name, file){
-      return file.path.match(new RegExp('(\\/|\\\\)'+name+'\\.html$')) != null ? 'class="active"' : '';
-    },
-    buildDate: function(){
-      return new Date().toISOString();
-    }
+  active: function(name, file){
+    return file.path.match(new RegExp('(\\/|\\\\)'+name+'\\.html$')) != null ? 'class="active"' : '';
+  },
+  buildDate: function(){
+    return new Date().toISOString();
+  }
 };
 
 var requirejsOptions = {
