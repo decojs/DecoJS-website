@@ -12,6 +12,8 @@ var requirejs = require('gulp-amd-optimizer');
 var foreach = require('gulp-foreach');
 var uglify = require('gulp-uglify');
 var onlyIf = require('gulp-if');
+var clone = require('gulp-clone');
+var filter = require('gulp-filter');
 var express = require('express');
 
 
@@ -80,12 +82,28 @@ gulp.task('html', function(){
 });
 
 gulp.task('pages', function(){
-    return gulp.src(paths.pages)
+  
+    var indexFilter = filter('**/index.html');
+  
+    var pages = gulp.src(paths.pages)
     .pipe(markdown(markdownOptions))
-    .pipe(wrap({src: 'template.ejs'}, ejsOptions))
-    .pipe(gulp.dest('www/pages'))
+    .pipe(wrap({src: 'template.ejs'}, ejsOptions));
+  
+    var normal = pages.pipe(clone())
+    .pipe(gulp.dest('www/pages'));
+  
+    var index = pages.pipe(clone())
+    .pipe(indexFilter)
+    .pipe(rename(function(path){
+      console.log('created', path.dirname+'.html');
+      path.basename = path.dirname;
+      path.dirname = '';
+    }))
+    .pipe(gulp.dest('www/pages'));
+      
+    return es.merge(normal, index)
     .pipe(wrap({src: 'www_source/index.ejs'}, ejsOptions))
-    .pipe(gulp.dest('www/snapshot'));
+    .pipe(gulp.dest('www/snapshot'));;
 });
 
 gulp.task('ejs', function(){

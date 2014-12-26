@@ -31,7 +31,9 @@
     "gulp-if": "0.0.5",
     "gulp-foreach": "0.0.1",
     "event-stream": "^3.1.5",
-    "gulp-amd-optimizer": "0.3.2"
+    "gulp-amd-optimizer": "0.3.2",
+    "gulp-clone": "^1.0.0",
+    "gulp-filter": "^2.0.0"
   },
   "dependencies": {
     "connect": "~2.11.0",
