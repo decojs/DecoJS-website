@@ -143,7 +143,7 @@ var paths = {
         'www_source/pages/**/*.md'
     ],
     'pageImages':[
-        'www_source/pages/**/*.png'
+        'www_source/pages/**/*.{png,svg}'
     ],
     'templates':[
         'www_source/pages/**/*.ejs'
