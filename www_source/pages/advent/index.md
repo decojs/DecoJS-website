@@ -26,3 +26,4 @@ Every day until Christmas a new short article about DecoJS will be posted here. 
 17. [QVC](#17)
 18. [Is Busy](#18)
 19. [Validation](#19)
+20. [QVC hooks](#20)
