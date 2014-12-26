@@ -1,5 +1,13 @@
 
-## [0.5.3](https://github.com/decojs/DecoJS/releases/tag/v0.5.2)
+## [0.6.0](https://github.com/decojs/DecoJS/releases/tag/v0.6.0)
+
+ * Implemented hashbang urls to improve crawlability by Goolge and other search engines. ([issue 21](https://github.com/decojs/DecoJS/issues/21))
+
+## [0.5.4](https://github.com/decojs/DecoJS/releases/tag/v0.5.4)
+
+ * Improved the way QVC errors and invalid parameter responses are handled
+ 
+## [0.5.3](https://github.com/decojs/DecoJS/releases/tag/v0.5.3)
 
  * Fixed a bug where nested viewmodels weren't cleaned up correctly, which could break the application ([issue 19](https://github.com/decojs/DecoJS/issues/19))
  * Made it possible to pass data into nested viewmodels using data-params
