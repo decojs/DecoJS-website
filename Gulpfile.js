@@ -16,7 +16,7 @@ var clone = require('gulp-clone');
 var filter = require('gulp-filter');
 var express = require('express');
 
-
+gulp.task('default', ['build'], function(){});
 
 gulp.task('watch', ['default', 'server'], function() {
     gulp.watch(paths.css, ['css']);
@@ -28,9 +28,7 @@ gulp.task('watch', ['default', 'server'], function() {
 });
 
 
-gulp.task('default', ['html', 'examples', 'pages', 'ejs', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){
-    
-});
+gulp.task('build', ['html', 'examples', 'pages', 'ejs', 'js', 'img', 'css', 'fonts', 'mainjs', 'bower'], function(){});
 
 gulp.task('server', function(){
   express().use(express.static(__dirname+"/www")).listen(80);
@@ -39,12 +37,12 @@ gulp.task('server', function(){
 gulp.task('css', function(){
     return gulp.src(paths.css)
     .pipe(concat('main.css'))
-    .pipe(onlyIf(minify, cssmin()))
+    //.pipe(onlyIf(minify, cssmin()))
     .pipe(gulp.dest('www/css'));
 });
 
 gulp.task('bower', function(){
-    return gulp.src(paths.bower, {base: 'www_source/bower_components'})
+    return gulp.src(paths.bower, {base: 'bower_components'})
     .pipe(gulp.dest('www/bower_components'));
 });
 
@@ -135,11 +133,11 @@ var minify = true;
 
 var paths = {
     'css': [
-        "www_source/bower_components/bootstrap/dist/css/bootstrap.min.css",
-        "www_source/bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
+        "bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
         "www_source/css/theme.css",
         "www_source/css/nav.css",
-        "www_source/bower_components/highlightjs/styles/sunburst.css",
+        "bower_components/highlightjs/styles/sunburst.css",
         "www_source/css/fonts.css"
     ],
     'js': [
@@ -170,10 +168,10 @@ var paths = {
         'www_source/css/fonts/*.woff'
     ],
     'bower': [
-        'www_source/bower_components/es6-promise/promise.js',
-        'www_source/bower_components/requirejs/require.js',
-        'www_source/bower_components/deco/{Source,Dist}/**/*.js',
-        'www_source/bower_components/knockout/dist/knockout.js'
+        'bower_components/es6-promise/promise.js',
+        'bower_components/requirejs/require.js',
+        'bower_components/deco/{Source,Dist}/**/*.js',
+        'bower_components/knockout/dist/knockout.js'
     ]
 }
 
@@ -200,7 +198,7 @@ var ejsOptions = {
 var requirejsOptions = {
   baseUrl: "www_source/pages",
   paths:{
-    'knockout': "../bower_components/knockout/dist/knockout.debug",
+    'knockout': "../../bower_components/knockout/dist/knockout.debug",
     'customBindings': "../js/customBindings"
   },
   
@@ -210,6 +208,6 @@ var requirejsOptions = {
   ],
 
   packages:[
-    {name:'deco', location:'../bower_components/deco/Source/deco', main:'deco'}
+    {name:'deco', location:'../../bower_components/deco/Source/deco', main:'deco'}
   ]
 };
