@@ -1,7 +1,7 @@
 define(['deco/events', 'piwik'], function(events, Piwik){
   
   return function FooterVM(model, when){
-    var tracker = Piwik.getTracker('//analytics.decojs.com/piwik.php', 4);
+    var tracker = Piwik.getTracker('//analytics.decojs.com/piwik.php', 1);
     
     when(events.thePageHasChanged, function(url, segments){
       tracker.setCustomUrl('/'+segments.join('/'));
