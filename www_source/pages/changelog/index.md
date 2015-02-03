@@ -1,7 +1,15 @@
 
+## [0.7.0](https://github.com/decojs/DecoJS/releases/tag/v0.7.0)
+
+ * When subscribing to subscriptions you now have the ability to notify the new subscriber of the current state ([issue 25](https://github.com/decojs/DecoJS/issues/25))
+
+## [0.6.1](https://github.com/decojs/DecoJS/releases/tag/v0.6.1)
+
+ * Fixed executing command/query returns true, which knockout submit/click bindings interpret as "don't preventDefault"
+
 ## [0.6.0](https://github.com/decojs/DecoJS/releases/tag/v0.6.0)
 
- * Implemented hashbang urls to improve crawlability by Goolge and other search engines. ([issue 21](https://github.com/decojs/DecoJS/issues/21))
+ * Implemented hashbang urls to improve crawlability by Goolge and other search engines ([issue 21](https://github.com/decojs/DecoJS/issues/21))
 
 ## [0.5.4](https://github.com/decojs/DecoJS/releases/tag/v0.5.4)
 
