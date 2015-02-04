@@ -1,4 +1,8 @@
 
+## [0.7.1](https://github.com/decojs/DecoJS/releases/tag/v0.7.1)
+
+ * The bower dependency ES6-Promise does not need to be exactly version 2.0.0
+
 ## [0.7.0](https://github.com/decojs/DecoJS/releases/tag/v0.7.0)
 
  * When subscribing to subscriptions you now have the ability to notify the new subscriber of the current state ([issue 25](https://github.com/decojs/DecoJS/issues/25))
