@@ -1,8 +1,3 @@
-FROM dockerfile/nodejs-bower-gulp-runtime
+FROM twistedstream/nodejs-es6-bower-gulp-runtime
 
-ENV VIRTUAL_HOST decojs.com,decojs.net
-
-#sudo docker build -t decojs.com .
-
-#sudo docker pull decojs/decojs.com
-#sudo docker run -d --name decojs.com decojs/decojs.com
+ENV VIRTUAL_HOST decojs.*
