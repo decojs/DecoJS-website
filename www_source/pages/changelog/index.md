@@ -1,4 +1,18 @@
 
+## [0.9.1](https://github.com/decojs/DecoJS/releases/tag/v0.9.1)
+* Redeploy of 0.9.0 due to build error
+
+## [0.9.0](https://github.com/decojs/DecoJS/releases/tag/v0.9.0)
+* Added a cachebusting key to the constraints GET requests. It can be configured in the qvc config object using `cacheKey`, but defaults to the current time
+* Set the default qvc baseUrl to `/qvc` rather than `/`
+
+## [0.8.1](https://github.com/decojs/DecoJS/releases/tag/v0.8.1)
+* Improved errorHandler output to include stacktrace of exception (if present)
+
+## [0.8.0](https://github.com/decojs/DecoJS/releases/tag/v0.8.0)
+* Improvements to the page load speed by loading nested viewmodels in paralell
+* Improvements to the page load speed by applying viewmodels as soon as they have loaded instead of waiting for all of them to load
+
 ## [0.7.1](https://github.com/decojs/DecoJS/releases/tag/v0.7.1)
 
  * The bower dependency ES6-Promise does not need to be exactly version 2.0.0
