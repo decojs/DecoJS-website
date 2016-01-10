@@ -25,7 +25,7 @@ define(['knockout'], function(ko){
 });
 ```
 
-Viewmodel constructors take two arguments, [model](#/reference/model) and [when](#/reference/when). 
+Viewmodel constructors take two arguments, [model](#!/reference/model) and [when](#!/reference/when).
 
 ##Nested viewmodels
 

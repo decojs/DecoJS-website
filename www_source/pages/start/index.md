@@ -120,7 +120,7 @@ You can add an input box to the `index.html` file into which any name can be ent
 
 ## Now what?
 
-Go read the [tutorial](#/tutorial/)! It is a lot more indepth, explains the things we have already looked at and goes on to explain other more complex features of DecoJS. The [references](#/reference/) explain specific features in even greater depth, and will teach you clever ways to solve common problems.
+Go read the [tutorial](#!/tutorial/)! It is a lot more indepth, explains the things we have already looked at and goes on to explain other more complex features of DecoJS. The [references](#!/reference/) explain specific features in even greater depth, and will teach you clever ways to solve common problems.
 
 ## Do you have the code all in one place?
 
