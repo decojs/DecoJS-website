@@ -10,17 +10,17 @@ The second parameter given to viewmodel constructors is a function called `when`
 function MyVM(model, when){
 
     function reactToTheEvent(){
-        console.log("this method is called when the anotherVM.doesSomething event is triggered");
+        console.log("this method is called when the events.somethingHappens event is triggered");
     }
 
     init: {
-        when(anotherVM.doesSomething, reactToTheEvent);
+        when(events.somethingHappens, reactToTheEvent);
     }
     
 }
 ```
 
-##Unsubscribe
+## Unsubscribe
 
 Events can be unsubscribed by using the `dont` method. Make sure to pass the same reaction function to both the subscribe call and the unsubscribe call.
 
@@ -29,7 +29,7 @@ when(something, reactToSomething);
 when(something).dont(reactToSomething);
 ```
 
-##On Destroy
+## On Destroy
 
 The `when.thisIsDestroyed` function can be used to manually unsubscribe when the viewmodel is destroyed. This is important so the entire viewmodel can be garbage collected.
 
@@ -42,7 +42,7 @@ when.thisIsDestroyed(function(){
 ```
 
 
-##Sub Contexts
+## Sub Contexts
 
 The `when` function returns a new `when` function in a new context when calle with no parameters. When a context is destroyed, so is all of the sub contexts. Subcontexts are a great way for a viewmodel to control a group of child viewmodels.
 
